@@ -118,7 +118,7 @@
           const updateActiveProject = (updateFn) => setProjects(prev => prev.map(p => p.id === activeProjectId ? updateFn(p) : p));
 
           const callGeminiAPI = async (prompt, signal) => {
-            const API_KEY = ""; // Để trống, môi trường sẽ tự xử lý
+            const API_KEY = "AIzaSyBG-0rlKAPlIWOL8KYoKKhv9YJGOrQgU9E"; // Để trống, môi trường sẽ tự xử lý
             const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
             try {
               const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }] };
